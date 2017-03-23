@@ -31,17 +31,15 @@ function determineTheme () {
 }
 
 function setDay () {
+  document.body.setAttribute('id', 'day')
   window.localStorage.setItem('theme', 'day')
   document.getElementById('message').innerHTML = 'YOU\'RE IN DAY MODE'
-  document.body.style.background = 'white'
-  document.body.style.color = 'black'
   document.getElementById('change').innerHTML = 'SWITCH TO NIGHT MODE'
 }
 
 function setNight () {
+  document.body.setAttribute('id', 'night')
   window.localStorage.setItem('theme', 'night')
   document.getElementById('message').innerHTML = 'YOU\'RE IN NIGHT MODE'
-  document.body.style.background = 'black'
-  document.body.style.color = 'white'
   document.getElementById('change').innerHTML = 'SWITCH TO DAY MODE'
 }
